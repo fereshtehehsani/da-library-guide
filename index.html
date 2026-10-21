@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="">
 
-<title>DA Library Guide</title>
+<title>Using the Library’s Electronic Resources – DA Library Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -42,7 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-45431c2918bd31147ddb3fa7038bb99f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,9 +74,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -96,10 +102,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -108,23 +110,22 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DA Library Guide</h1>
+<h1 class="title">Using the Library’s Electronic Resources</h1>
+<p class="subtitle lead">A step-by-step guide for DA students</p>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -136,10 +137,248 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<style>
+/* 1. Set Garamond font across the document */
+body, main, .page-columns, .cr-section, .cr-sticky, p, li, h1, h2, h3, h4 {
+  font-family: "Garamond", "EB Garamond", "Cormorant Garamond", "Baskerville", serif !important;
+  background-color: #ffffff !important;
+}
+
+/* 2. Proportional typography scaling for Garamond readability */
+body {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+h1, .title {
+  font-size: 2.3rem !important;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem !important;
+  font-weight: 600;
+}
+
+/* 3. Text card styling with red accent line */
+.sage-box {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #d93838;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin-bottom: 1.2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.sage-badge {
+  color: #b52b2b;
+  font-weight: bold;
+}
+
+/* 4. Enlarging the last image container (#cr-menu3-detail) & proportioning sticky pane */
+#cr-menu3-detail img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  transform: scale(1.12); /* Slightly enlarges the image display */
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+
+/* Adjust sticky pane proportion for Step 3 to accommodate the larger image */
+.cr-section:has(#cr-menu3-detail) {
+  grid-template-columns: 1fr 1.25fr !important; /* Allocates more room to the sticky image */
+}
+</style>
+<section id="accessing-the-libraries-page" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-the-libraries-page">Accessing the Libraries page</h2>
+<p>Follow these steps to access the Libraries page through your DA account.</p>
+<section id="step-1-sign-in-to-your-da-account" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-sign-in-to-your-da-account">Step 1: Sign in to your DA account</h3>
+<p>Go to the <a href="https://service.da-vienna.ac.at/">DA Service Portal</a> and sign in with your DA account.</p>
+<p>Once you have signed in, follow the steps below.</p>
+</section>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<section id="step-2-open-my-studies" class="level3 narrative trigger">
+<h3 class="narrative anchored" data-anchor-id="step-2-open-my-studies">Step 2: Open My Studies</h3>
+</section>
+<div class="trigger new-trigger" data-focus-on="cr-libraries">
+<div class="narrative">
+<p>In the navigation bar at the top of the page, click My Studies to open the drop-down menu.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>The menu displays several options.</p>
+</div>
+</div>
+<section id="step-3-select-libraries" class="level3 narrative trigger">
+<h3 class="narrative anchored" data-anchor-id="step-3-select-libraries">Step 3: Select Libraries</h3>
+</section>
+<div class="trigger new-trigger" data-focus-on="cr-libraries">
+<div class="narrative">
+<p>Look at the bottom of the drop-down menu and select Libraries.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-libraries" class="sticky">
+<p><img src="images/da-libraries-menu.jpg" class="img-fluid" alt="The DA Service Portal showing the open My Studies drop-down menu, with Libraries at the bottom."></p>
+</div>
+</div>
+</div>
+</div>
+<section id="step-2-course-reading-materials" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-course-reading-materials">Step 2: Course &amp; Reading Materials</h3>
+<p>Once you are in the Libraries section, here is a quick guide to finding your textbooks, syllabus readings, and lecture slides!</p>
+</section>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-menu2">
+<div class="narrative">
+<section id="books" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="books"><span class="sage-badge">1. Books</span></h3>
+<ul>
+<li><strong>Where to find them:</strong> Hard copies of essential books are available at both the <strong>DA Library</strong> and the <strong>MFA Library</strong>.</li>
+<li><strong>Details:</strong> See the “DA Libraries” section below for details on opening hours and borrowing!</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-menu2">
+<div class="narrative">
+<section id="reading-materials" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="reading-materials"><span class="sage-badge">2. Reading materials</span></h3>
+<ul>
+<li><strong>Reading Priorities:</strong> Your course convenor will clearly label readings in the syllabus as <em>fundamental</em>, <em>mandatory</em>, or <em>optional</em> so you know what to read first.</li>
+<li><strong>Digital Copies:</strong> You can access all digital readers on the <strong>DA Intranet</strong> (next to the syllabus) and on your course’s <strong>Moodle</strong> page.</li>
+<li><strong>Printing:</strong> Feel like reading on paper? You can easily print out course readers using the DA campus printers or print them at home.</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-menu2">
+<div class="narrative">
+<section id="additional-course-materials" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="additional-course-materials"><span class="sage-badge">3. Additional course materials</span></h3>
+<ul>
+<li><strong>Moodle Hub:</strong> PPT slides, info sheets, and any extra resources shared by your professors are always uploaded directly to your course <strong>Moodle</strong> page.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-menu2" class="sticky">
+<p><img src="images/da-libraries-menu2.jpg" class="img-fluid" alt="The DA Service Portal menu showing course and reading materials options."></p>
+</div>
+</div>
+</div>
+</div>
+<section id="step-3-da-libraries-electronic-resources" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-da-libraries-electronic-resources">Step 3: DA Libraries &amp; Electronic Resources</h3>
+<p>Once you navigate to the <strong>Libraries</strong> page, you can access both physical collections and digital libraries. Here is a student-friendly guide to using the <strong>DA Student Library</strong>, the <strong>MFA Library</strong>, and <strong>Ebook Central</strong>.</p>
+</section>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-menu3-detail">
+<div class="narrative">
+<section id="diplomatische-akademie-library-da-student-library" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="diplomatische-akademie-library-da-student-library"><span class="sage-badge">1. Diplomatische Akademie Library (DA Student Library)</span></h3>
+<p>The <strong>DA Student Library</strong> features an open-stack collection containing core course textbooks alongside key works in Economics, History, International Relations, Law, Environmental Studies, Digital, and Cultural Studies.</p>
+<ul>
+<li><p><strong>Location:</strong> Reading Room, 1st Floor (next to the Finance Department).</p></li>
+<li><p><strong>Opening Hours:</strong> Monday–Friday, 1:00 PM – 5:00 PM. &gt; <em>Need a book urgently outside opening hours?</em> Stop by the Academic Administration Office on the 1st floor during standard work hours or email <strong>bibliothek@da-vienna.ac.at</strong>.</p></li>
+<li><p><strong>How Borrowing Works:</strong></p>
+<ul>
+<li><strong>Limit:</strong> You can borrow up to <strong>6 books</strong> at a time (you can borrow more once previous books are returned).</li>
+<li><strong>Searching:</strong> Search the available collection directly via the online catalog: <a href="https://davienna-my.sharepoint.com/:x:/g/personal/ruimeng_zhao_da-vienna_ac_at/IQCegUOe9Wk5Q7_il-Mo54gVASlSh_SfJke35yXdUkbt59g">SEARCH HERE</a>.</li>
+<li><strong>Returns:</strong> Return books directly to the DA Library during open hours or to the Academic Administration Office.</li>
+<li><strong>Shelf Care:</strong> Always return books to their proper place!<br>
+<em>(Example DA call number format: <code>LAW-Maxm-1.1-01Ex</code>)</em></li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-menu3-detail">
+<div class="narrative">
+<section id="library-of-the-ministry-for-foreign-affairs-mfa-library" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="library-of-the-ministry-for-foreign-affairs-mfa-library"><span class="sage-badge">2. Library of the Ministry for Foreign Affairs (MFA Library)</span></h3>
+<p>The <strong>MFA Library</strong> offers specialized literature on European/foreign policy, diplomacy, international law, human rights, and global economy, as well as language dictionaries and past DA Master’s theses.</p>
+<ul>
+<li><strong>Staff &amp; Seminar Room Location:</strong>
+<ul>
+<li><strong>Librarian Offices:</strong> 1st Floor along the long corridor (next to the lounge area).</li>
+<li><strong>Current Books &amp; Textbooks:</strong> Housed in open-stack collections inside the new seminar rooms along the long corridor.</li>
+</ul></li>
+<li><strong>Office Hours:</strong>
+<ul>
+<li><strong>Monday – Thursday:</strong> 9:00 AM – 4:00 PM</li>
+<li><strong>Friday:</strong> 9:00 AM – 2:30 PM<br>
+<em>(Note: Opening hours may vary on public holidays and school breaks.)</em></li>
+</ul></li>
+<li><strong>How to Borrow Books:</strong>
+<ol type="1">
+<li><strong>Search the Catalog:</strong> Browse topics via the MFA Library’s online catalog.</li>
+<li><strong>In-Person Requests:</strong> For books shelved in the seminar rooms opposite the Librarian’s Office, submit your loan request in person. <em>Removing books without prior approval is strictly prohibited.</em></li>
+<li><strong>Email Orders:</strong> Click <em>“Available in the Foreign Policy Library of the BMEIA”</em> in the catalog to email your order (<strong>aussenpolitische.bibliothek@bmeia.gv.at</strong>), quoting the call number, title, author, and year. You will receive an email confirmation when your books are ready.</li>
+<li><strong>Pick-up &amp; Returns:</strong> Use the collection and return boxes located in the library corridor in front of the study room entrance.</li>
+</ol></li>
+<li><strong>Borrowing Terms:</strong>
+<ul>
+<li><strong>Limits:</strong> Up to <strong>6 books</strong> for a <strong>3-week loan period</strong> (extensions are possible).</li>
+<li><strong>Returns:</strong> Always hand returned books to a staff member or place them in the return box to avoid misplacement.<br>
+<em>(Example MFA call number format: <code>58.243C</code>)</em></li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-menu3-detail">
+<div class="narrative">
+<section id="ebook-central" class="level3 sage-box">
+<h3 class="anchored" data-anchor-id="ebook-central"><span class="sage-badge">3. Ebook Central</span></h3>
+<p><strong>Ebook Central</strong> is your digital library portal, providing full-text access to scholarly ebooks, handbooks, and research manuals across a broad range of subjects.</p>
+<ul>
+<li><strong>What is it good for?</strong>
+<ul>
+<li><strong>Remote Access:</strong> Read full-text ebooks and individual chapters from any internet connection.</li>
+<li><strong>Research Tools:</strong> Easily highlight text, take personal notes, export precise bibliographical citations, and share research with peers.</li>
+</ul></li>
+<li><strong>How to Use Ebook Central:</strong>
+<ol type="1">
+<li><strong>Access Account:</strong> To access your Ebook Central account, please click <a href="https://ebookcentral.proquest.com/auth/lib/dalib-ebooks/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fdalib-ebooks%2Fhome.action">here</a>.</li>
+<li><strong>Browser Tip:</strong> The link opens in a new tab. If you see an error after consenting to cookies, simply return to the portal page and click the link a second time.</li>
+<li><strong>Get Started:</strong> Check out the <em>“How-to Videos”</em> and <em>“FAQs”</em> on the Ebook Central homepage to make the most of its features!</li>
+</ol></li>
+<li><strong>Feedback &amp; Questions:</strong><br>
+Suggestions or questions about Ebook Central are always welcome! Reach out to the <strong>DA Student Library</strong> at <strong>bibliothek@da-vienna.ac.at</strong>.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-menu3-detail" class="sticky">
+<p><img src="images/da-libraries-menu3.jpg" class="img-fluid" alt="The DA Service Portal menu showing options for DA Library, MFA Library, and Ebook Central."></p>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
